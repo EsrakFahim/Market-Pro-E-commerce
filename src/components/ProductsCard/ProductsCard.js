@@ -7,12 +7,15 @@ const ProductCard = ({ productData }) => {
             return null; // Return nothing if product data is missing
       }
 
-      const { thumb, content, className } = productData;
+      const { _id, thumb, content, className } = productData;
 
       return (
             <div className={className || ""}>
                   {/* Thumbnail Section */}
-                  <Link to={thumb.link || "#"} className={thumb.className}>
+                  <Link
+                        to={`/product-details/${_id}`}
+                        className={thumb.className}
+                  >
                         <img
                               src={thumb.img.src || ""}
                               alt={thumb.img.alt || "Product image"}
@@ -27,7 +30,7 @@ const ProductCard = ({ productData }) => {
                   <div className={content.className}>
                         <h6 className={content.title.className}>
                               <Link
-                                    to={content.title.link || "#"}
+                                    to={`/product-details/${_id}`}
                                     tabIndex={content.title.tabIndex}
                               >
                                     {content.title.text}
@@ -100,7 +103,8 @@ const ProductCard = ({ productData }) => {
                               className={content.addToCart.className}
                               tabIndex={content.addToCart.tabIndex}
                         >
-                              {content.addToCart.text} <i className={content.addToCart.icon} />
+                              {content.addToCart.text}{" "}
+                              <i className={content.addToCart.icon} />
                         </Link>
                   </div>
             </div>

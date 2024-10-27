@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import { getCountdown } from '../helper/Countdown';
 
-const ProductDetailsTwo = () => {
+const ProductDetailsTwo = ({ product }) => {
     const [timeLeft, setTimeLeft] = useState(getCountdown());
 
     useEffect(() => {

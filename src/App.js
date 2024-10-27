@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RouteScrollToTop from "./helper/RouteScrollToTop";
-import HomePageOne from "./pages/HomePageOne";
 import PhosphorIconInit from "./helper/PhosphorIconInit";
 import HomePageTwo from "./pages/HomePageTwo";
 import ShopPage from "./pages/ShopPage";
@@ -21,20 +20,10 @@ function App() {
 
                   <Routes>
                         <Route exact path="/" element={<HomePageTwo />} />
-                        <Route
-                              exact
-                              path="/index-two"
-                              element={<HomePageOne />}
-                        />
                         <Route exact path="/shop" element={<ShopPage />} />
                         <Route
                               exact
-                              path="/product-details-two"
-                              element={<ProductDetailsPageOne />}
-                        />
-                        <Route
-                              exact
-                              path="/product-details"
+                              path="/product-details/:_id"
                               element={<ProductDetailsPageTwo />}
                         />
                         <Route exact path="/cart" element={<CartPage />} />

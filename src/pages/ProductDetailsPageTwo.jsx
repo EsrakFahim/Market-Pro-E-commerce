@@ -10,9 +10,15 @@ import NewsletterOne from "../components/NewsletterOne";
 import FooterTwo from "../components/FooterTwo";
 import BottomFooter from "../components/BottomFooter";
 import ScrollToTop from "react-scroll-to-top";
+import { useParams } from "react-router-dom";
+import { productsData } from "../Data/products";
 
 
 const ProductDetailsPageTwo = () => {
+  const { _id } = useParams(); // Get the ID from the URL
+  const product = productsData.find((item) => String(item._id) === _id); // Filter the product
+
+  if (!product) return <p>Product not found!</p>; // Handle invalid ID
 
 
 
@@ -34,7 +40,7 @@ const ProductDetailsPageTwo = () => {
       <Breadcrumb title={"Product Details"} />
 
       {/* ProductDetailsTwo */}
-      <ProductDetailsTwo />
+      <ProductDetailsTwo product={product} />
 
       {/* NewArrivalTwo */}
       <NewArrivalTwo />
