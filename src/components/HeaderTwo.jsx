@@ -22,18 +22,6 @@ const HeaderTwo = ({ category }) => {
         };
     }, []);
 
-    // Set the default language
-    const [selectedLanguage, setSelectedLanguage] = useState("Eng");
-    const handleLanguageChange = (language) => {
-        setSelectedLanguage(language);
-    };
-
-    // Set the default currency
-    const [selectedCurrency, setSelectedCurrency] = useState("USD");
-    const handleCurrencyChange = (currency) => {
-        setSelectedCurrency(currency);
-    };
-
     // Mobile menu support
     const [menuActive, setMenuActive] = useState(false)
     const [activeIndex, setActiveIndex] = useState(null);
@@ -89,7 +77,7 @@ const HeaderTwo = ({ category }) => {
                 </button>
                 <div className="mobile-menu__inner">
                     <Link to="/" className="mobile-menu__logo">
-                        <img src="assets/images/logo/logo.png" alt="Logo" />
+                        <img src="assets/images/logo/logo.svg" alt="Logo" />
                     </Link>
                     <div className="mobile-menu__menu">
                         {/* Nav Menu Start */}
@@ -255,7 +243,7 @@ const HeaderTwo = ({ category }) => {
                     <nav className="header-inner flex-between">
                         <div className="logo">
                             <Link to="/" className="link">
-                                <img src="assets/images/logo/logo-two.png" alt="Logo" />
+                                <img src="assets/images/logo/logo.svg" alt="Logo" />
                             </Link>
                         </div>
                         <div className="flex-align gap-16">
@@ -351,7 +339,7 @@ const HeaderTwo = ({ category }) => {
                 </div>
             </header>
 
-            
+
             <header className={`header bg-white border-bottom border-gray-100 ${scroll && "fixed-header"}`}>
                 <div className="container container-lg">
                     <nav className="header-inner d-flex justify-content-center gap-8">

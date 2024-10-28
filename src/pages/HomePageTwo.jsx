@@ -38,7 +38,7 @@ const HomePageTwo = () => {
       <Preloader />
 
       {/* HeaderTwo */}
-      <HeaderTwo category={false} />
+      {/* <HeaderTwo category={false} /> */}
 
       {/* BannerTwo */}
       <BannerTwo />
@@ -89,10 +89,10 @@ const HomePageTwo = () => {
       <NewsletterTwo />
 
       {/* FooterTwo */}
-      <FooterTwo />
+      {/* <FooterTwo /> */}
 
       {/* BottomFooter */}
-      <BottomFooter />
+      {/* <BottomFooter /> */}
 
 
     </>

@@ -1,9 +1,8 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
 import RouteScrollToTop from "./helper/RouteScrollToTop";
 import PhosphorIconInit from "./helper/PhosphorIconInit";
 import HomePageTwo from "./pages/HomePageTwo";
 import ShopPage from "./pages/ShopPage";
-import ProductDetailsPageOne from "./pages/ProductDetailsPageOne";
 import ProductDetailsPageTwo from "./pages/ProductDetailsPageTwo";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
@@ -11,14 +10,15 @@ import AccountPage from "./pages/AccountPage";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import ContactPage from "./pages/ContactPage";
+import { route } from "./Router/Routes";
 
 function App() {
       return (
-            <BrowserRouter>
+            <RouterProvider router={route} >
                   <RouteScrollToTop />
                   <PhosphorIconInit />
 
-                  <Routes>
+                  {/* <Routes>
                         <Route exact path="/" element={<HomePageTwo />} />
                         <Route exact path="/shop" element={<ShopPage />} />
                         <Route
@@ -48,8 +48,8 @@ function App() {
                               path="/contact"
                               element={<ContactPage />}
                         />
-                  </Routes>
-            </BrowserRouter>
+                  </Routes> */}
+            </RouterProvider>
       );
 }
 
