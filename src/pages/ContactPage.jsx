@@ -15,7 +15,7 @@ const ContactPage = () => {
       <ColorInit color={true} />
 
       {/* ScrollToTop */}
-      <ScrollToTop smooth color="#FA6400" />
+      {/* <ScrollToTop smooth color="#FA6400" /> */}
 
       {/* Preloader */}
       <Preloader />
