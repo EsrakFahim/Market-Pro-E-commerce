@@ -13,6 +13,9 @@ const ProductsDetails = ({ product, timeLeft }) => {
                         </h5>
                         <div className="flex-align flex-wrap gap-12">
                               <div className="flex-align gap-12 flex-wrap">
+                                    {/* 
+                                          the rating stars are have a different functionality
+                                    */}
                                     <div className="flex-align gap-8">
                                           <span className="text-15 fw-medium text-warning-600 d-flex">
                                                 <i className="ph-fill ph-star" />
@@ -54,9 +57,12 @@ const ProductsDetails = ({ product, timeLeft }) => {
                         </p>
                         <div className="my-32 flex-align gap-16 flex-wrap">
                               <div className="flex-align gap-8">
+                                    {/* 
+                                          the discount percentage is have a different functionality
+                                    */}
                                     <div className="flex-align gap-8 text-main-two-600">
                                           <i className="ph-fill ph-seal-percent text-xl" />
-                                          -10%
+                                          -10%  
                                     </div>
                                     <h6 className="mb-0">USD 320.99</h6>
                               </div>

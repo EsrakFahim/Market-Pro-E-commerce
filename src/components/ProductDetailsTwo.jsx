@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import Slider from 'react-slick';
 import { getCountdown } from '../helper/Countdown';
 import ProductImage from './ProductDetails/ProductImage/ProductImage';
 import ProductsDetails from './ProductDetails/ProductsDetails/ProductsDetails';
-import { Check } from '@phosphor-icons/react';
 import CheckoutPart from './ProductDetails/CheckoutPart/CheckoutPart';
 import ProductDescription from './ProductDetails/ProductDescription/ProductDescription';
 import ProductReview from './ProductDetails/ProductReview/ProductReview';
@@ -45,10 +43,10 @@ const ProductDetailsTwo = ({ product }) => {
         focusOnSelect: true,
     };
     return (
-        <section className="product-details py-80">
+        <section className="product-details py-80 position-relative">
             <div className="container container-lg">
                 <div className="row gy-4">
-                    <div className="col-xl-9">
+                    <div className="col-xl-9 position-sticky top-0">
                         <div className="row gy-4">
                             <ProductImage productImages={productImages} setMainImage={setMainImage} mainImage={mainImage} settingsThumbs={settingsThumbs} />
                             <ProductsDetails product={product} timeLeft={timeLeft} />
@@ -115,7 +113,7 @@ const ProductDetailsTwo = ({ product }) => {
 
 
 
-                                <ProductReview/>
+                                <ProductReview />
                             </div>
                         </div>
                     </div>
