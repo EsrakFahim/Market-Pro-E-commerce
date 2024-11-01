@@ -4,11 +4,12 @@ import ShopPage from "../pages/ShopPage";
 import ProductDetailsPageTwo from "../pages/ProductDetailsPageTwo";
 import CartPage from "../pages/CartPage";
 import CheckoutPage from "../pages/CheckoutPage";
-import AccountPage from "../pages/AccountPage";
 import BlogPage from "../pages/BlogPage";
 import BlogDetailsPage from "../pages/BlogDetailsPage";
 import ContactPage from "../pages/ContactPage";
 import Main from "../Layout/Main";
+import Login from "../pages/Login";
+import SignUp from "../pages/Signup";
 
 export const route = createBrowserRouter([
       {
@@ -37,8 +38,12 @@ export const route = createBrowserRouter([
                         element: <CheckoutPage />,
                   },
                   {
-                        path: "/account",
-                        element: <AccountPage />,
+                        path:"/login",
+                        element:<Login/>
+                  },
+                  {
+                        path:"/signup",
+                        element:<SignUp/>
                   },
                   {
                         path: "/blog",

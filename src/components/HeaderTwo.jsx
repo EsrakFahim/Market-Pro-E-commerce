@@ -281,7 +281,7 @@ const HeaderTwo = ({ category }) => {
                                     </span>
                                 </button>
                                 <Link
-                                    to="/account"
+                                    to="/login"
                                     className="flex-align flex-column gap-8 item-hover-two"
                                 >
                                     <span className="text-2xl text-white d-flex position-relative item-hover__text">
