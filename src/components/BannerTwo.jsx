@@ -18,7 +18,7 @@ const BannerTwo = () => {
         <div className="banner-two">
             <div className="container container-lg">
                 <div className="banner-two-wrapper d-flex align-items-start">
-                    <div className="w-265 d-lg-block d-none flex-shrink-0">
+                    {/* <div className="w-265 d-lg-block d-none flex-shrink-0">
                         <div className="responsive-dropdown style-two common-dropdown nav-submenu p-0 submenus-submenu-wrapper shadow-none border border-gray-100 position-relative border-top-0">
                             <button
                                 type="button"
@@ -535,7 +535,7 @@ const BannerTwo = () => {
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="banner-item-two-wrapper rounded-24 overflow-hidden position-relative arrow-center flex-grow-1 mb-0">
                         <img
                             src="assets/images/bg/banner-two-bg.png"
